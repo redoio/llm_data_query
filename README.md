@@ -1,6 +1,6 @@
 # Redo.io AI Assistant
 
-This is a Proof of Concept (PoC) to leverage LLM to generate filtering conditions from a natural language user query.
+This is a Proof of Concept (PoC) to leverage LLMs to generate filtering conditions from a natural language user query.
 
 ### Dependencies
 1. This project requires `Poetry` that can be installed from https://python-poetry.org/docs/#installation
