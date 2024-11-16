@@ -1,0 +1,38 @@
+{
+  "eligibility_filters": [
+    {
+      "demographics": {
+        "individuals_age": 0,
+        "individuals_age_column": "Birthday",
+        "individuals_gender": "female",
+        "individuals_gender_column": "Gender",
+        "individuals_ethnicity": "Black",
+        "individuals_ethnicity_column": "Ethnicity",
+        "sentenced_age": 0,
+        "sentenced_age_column": "",
+        "sentenced_age_operator": "",
+        "sentenced_years": 0,
+        "sentenced_years_column": "",
+        "sentenced_years_operator": "",
+        "controlling_offenses": {
+          "offense_number": "PC123",
+          "include_tables": "",
+          "include_offenses_type": "unknown",
+          "exclude_tables": "",
+          "exclude_offenses_type": "",
+          "offenses_subquery": ""
+        },
+        "demographics_subquery": ""
+      },
+      "offenses": {
+        "offense_number": "PC123",
+        "include_tables": "",
+        "include_offenses_type": "unknown",
+        "exclude_tables": "",
+        "exclude_offenses_type": "",
+        "offenses_subquery": ""
+      },
+      "logical_operations": []
+    }
+  ]
+}

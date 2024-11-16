@@ -1,0 +1,41 @@
+{
+  "eligibility_filters": [
+    {
+      "demographics": {
+        "individual_age": 0,
+        "individual_age_column": "",
+        "individual_age_operator": "",
+        "individual_location": "",
+        "individual_location_column": "",
+        "sentenced_by": "",
+        "sentenced_by_column": "",
+        "individual_ethnicity": "Black",
+        "individual_ethnicity_column": "ethnicity",
+        "sentenced_age": 0,
+        "sentenced_age_column": "",
+        "sentenced_age_operator": "",
+        "sentenced_years": 5,
+        "sentenced_years_column": "aggregate sentence in years",
+        "sentenced_years_operator": ">",
+        "served_years": 10,
+        "served_years_column": "time served in years",
+        "served_years_operator": ">",
+        "demographic_subquery": "Black, served more than 10 years and sentenced to more than 5"
+      },
+      "offenses": {
+        "offense_number": "",
+        "offense_number_column": "",
+        "offense_number_tables": "",
+        "offense_number_type": "unknown",
+        "offense_number_operator": "",
+        "offense_description": "",
+        "offense_description_column": "",
+        "offense_subquery": ""
+      },
+      "logical_operations": [
+        "AND",
+        "AND"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "eligibility_filters": [
+    {
+      "demographics": {
+        "individuals_age": 0,
+        "individuals_age_column": "",
+        "individuals_location": "",
+        "individuals_location_column": "",
+        "individuals_ethnicity": "Black",
+        "individuals_ethnicity_column": "race",
+        "sentenced_age": 0,
+        "sentenced_age_column": "",
+        "sentenced_age_operator": "",
+        "sentenced_years": 0,
+        "sentenced_years_column": "",
+        "sentenced_years_operator": "",
+        "served_years": 10,
+        "served_years_column": "sentence_length",
+        "served_years_operator": ">",
+        "controlling_offenses": {
+          "offense_number": "",
+          "offense_number_column": "",
+          "tables": "",
+          "offenses_type": "unknown",
+          "offenses_operator": "",
+          "offenses_subquery": ""
+        },
+        "demographics_subquery": "Black individuals who have served over 10 years"
+      },
+      "offenses": null,
+      "logical_operations": []
+    }
+  ]
+}

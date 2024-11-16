@@ -1,0 +1,41 @@
+{
+  "eligibility_filters": [
+    {
+      "demographics": {
+        "individuals_age": 0,
+        "individuals_age_column": "age in years",
+        "individuals_location": "",
+        "individuals_location_column": "current location",
+        "sentenced_by": "",
+        "sentenced_by_column": "controlling case sentencing county",
+        "individuals_ethnicity": "black",
+        "individuals_ethnicity_column": "ethnicity",
+        "sentenced_age": 0,
+        "sentenced_age_column": "age during offense",
+        "sentenced_age_operator": "exact",
+        "sentenced_years": 10,
+        "sentenced_years_column": "aggregate sentence in years",
+        "sentenced_years_operator": ">",
+        "served_years": 5,
+        "served_years_column": "time served in years",
+        "served_years_operator": ">",
+        "demographics_subquery": "Find all individuals who are black, served more than 5 years, sentenced to more than 10 years"
+      },
+      "offenses": {
+        "offense_number": "PC666",
+        "offense_number_column": "controlling offense",
+        "offense_tables": "",
+        "offenses_type": "controlling",
+        "offenses_operator": "exact",
+        "offenses_description": "",
+        "offenses_description_column": "description",
+        "offenses_subquery": "for a controlling offense such as PC666"
+      },
+      "logical_operations": [
+        "AND",
+        "AND",
+        "AND"
+      ]
+    }
+  ]
+}

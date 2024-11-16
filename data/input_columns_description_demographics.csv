@@ -1,0 +1,27 @@
+Column Name,Description
+CDCNo,Unique identifier for each individual in the CDCR (California Department of Corrections and Rehabilitation) prison system. These individuals are currently incarcerated or imprisoned in any one of the state's 35 prisons
+Offender's Name,"Name of the incarcerated person in CDCR (follows a last name, first name structure)"
+Birthday,Date of birth of the incarcerated person
+Ethnicity,"Ethnicity or race of the incarcerated person (White, black, Asian, Hispanic, Pacific Islander, etc.)"
+Gender,"Gender (Male, female, other) of the incarcerated person"
+Controlling Offense,"Offense number from the California criminal code (penal code, vehicular code, other) that the incarcerated person is currently serving time for. This is the main offense that the person is sentenced for hence it ""controls"" their incarceration. This could be PC187, PC664, PC214(a), etc."
+Description,Text description or details about the controlling offense. This is a short sentence that describes the controlling offense
+Offense Begin Date,Date on which the offense was committed
+Offense End Date,Date on which the offense was committed
+Controlling Case Number,Case number of the individual's controlling offense
+Controlling Case Sentencing County,"County or geographical location where the incarcerated individual was sentenced for their offense. This is the county where the case was deliberated with a judge, defense and prosecutor. This is the county where the sentence term and length was decided. This is also the county that has the authority to decide whether to resentence the individual or provide any other form of relief. "
+Sentence Type,Specifies whether the offense is a second strike or third strike or something else. This indicates the number of serious felonies that the individual committed and has served time for. A third strike felony carries a minimum of 25 years to life. 
+Aggregate Sentence in Months,"Total length of the sentence in months. This is a numerical count and can be converted to years, decades, etc."
+Offense Category,"Specifies the nature of the offense. This could be drug related, property related, crimes against a person, or something else"
+EPRD/MEPD,"Earliest Possible Release Date (EPRD) – the date determinately-sentenced offenders will be released based on the sentence imposed by the court, less any applicable credits; Minimum Eligible Parole Date (MEPD) – the date indeterminately-sentenced offenders (i.e., persons sentenced to life with the possibility of parole, or “lifers”) are eligible for parole consideration by the Parole Board based on the sentence imposed by the court, less any applicable credits"
+Current Location,"Name of the prison facility where the person is incarcerated. This is one of CDCR's 35 state prisons - San Quentin, CA Institution for Men, CA Central Women's Facility, etc."
+Current Classification Score,Score that determines the security level of the prison the individual will be assigned to live in. Score represents how violent or serious the offense committed is.
+Current Security Level,Security level of the prison facility the individual is located in. This could be a maximum security to low level security prison.
+Classification Score 5 Years Ago,Classification score described above but from 5 years ago. The difference between the current and previous score tells us how the individual has improved their behavior
+Sex Registrant,"Specifies whether the individual's offense was sex related or not. For example, an offense like sexual abuse, rape or assault with the intent to commit sexual battery would classify as a sex related offense and therefore the incarcerated person would be a sex registrant"
+Mental Health Level of Care,Specifies what degree of mental health care an individual is receiving
+CSRA,"Recidivism risk assessment score determined by CDCR based on the nature of offense, age, gender, etc. A high risk score means that an individual is likely to recidivate, i.e. commit an offenses upon release "
+DPPV Disability - Mobility,"Mobility related disability, i.e. requires a wheelchair, amputee, etc."
+DPPV Disability - Hearing,"Hearing related disability, i.e. requires hearing aids, etc."
+DPPV Disability - Vision,Vision related disability
+DPPV Disability - Speech,Speech related disability
