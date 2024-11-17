@@ -48,7 +48,7 @@ class LegalAssistantTools:
                     --- To denote conditional operators for text or string values in a table, use 'include', 'exclude'
                     --- To denote conditional operators for text or string values compared to another text or string value, us 'exact'
                     --- Categorize offenses type as 'controlling', 'current','prior' or 'unknown'
-                    --- Use the list of fields or variables provided in {columns_context} to map with the fields with suffix "_column"
+                    --- Use the list of fields or variables provided in {columns_context} to map with the fields with suffix "_column". Do not introduce any new column or variable names.
                  Consider the conversation history for context: {chat_history}
                  """
             ),
@@ -159,7 +159,7 @@ class LegalAssistant:
         self.data_df: Optional[pd.DataFrame] = None
         self.columns_context: List[str] = []
 
-        self.load_columns_context()
+        self.columns_context = self.load_columns_context()
          # Initialize memory
         self.memory = ConversationBufferMemory(
             return_messages=True,
@@ -228,19 +228,30 @@ class LegalAssistant:
     def load_columns_context(self) -> None:
         """Load column context from demographics data"""
         try:
-            demographics_df = pd.read_excel("./data/demographics.xlsx")
-            self.columns_context = list(demographics_df.columns)
-            self.tools_manager.columns_context = self.columns_context
-            logger.info(f"Loaded {len(self.columns_context)} columns from demographics data")
+            if self.data_df is not None:
+                self.columns_context = list(self.data_df.columns)
+                self.tools_manager.columns_context = self.columns_context
+                logger.info(f"Loaded {len(self.columns_context)} columns from input demographics data")
+            else:
+                print("Input dataframe is not loaded yet to assign a columns context. A default context will be used instead")
+                demographics_df = pd.read_csv("./data/demographics.csv")
+                self.columns_context = list(demographics_df.columns)
+                self.tools_manager.columns_context = self.columns_context
+                logger.info(f"Loaded {len(self.columns_context)} columns from demographics data")
         except Exception as e:
-            logger.error(f"Error loading columns context: {str(e)}")
+            logger.error(f"Error loading columns context: {str(e)}. No column context will be available.")
             self.columns_context = []
 
     def load_data(self, file_path: str) -> str:
         """Load data from uploaded file"""
         try:
             self.data_df = pd.read_csv(file_path)
+            # new
+            self.columns_context = list(self.data_df.columns)
+            self.tools_manager.columns_context = self.columns_context
+            #
             logger.info(f"Loaded data with columns: {self.data_df.columns}")
+            logger.info(f"Updated : {self.data_df.columns}")
             return f"Data loaded successfully with {self.data_df.shape[0]} rows"
         except Exception as e:
             logger.error(f"Error loading data: {str(e)}")
@@ -356,6 +367,7 @@ async def ask_for_file():
 
     legal_assistant = cl.user_session.get("assistant")
     response = legal_assistant.load_data(files[0].path)
+    legal_assistant.load_columns_context()
     await cl.Message(content=response).send()
 
 @cl.on_message

@@ -6,27 +6,9 @@ import os
 import traceback
 import copy
 
-# eligibility_filters = [
-#     Conditions(
-#         demographics=Demographics(
-#             individuals_age=40, individuals_age_column='Birthday',
-#             individuals_gender='Female', individuals_gender_column='Gender',
-#             individuals_ethnicity='White', individuals_ethnicity_column='Ethnicity',
-#             sentenced_age=70, sentenced_age_column='Birthday', sentenced_age_operator='<',
-#             sentenced_years=0, sentenced_years_column='Aggregate Sentence in Months',
-#             sentenced_years_operator='>', demographics_subquery='Find Black females over the age of 40'
-#         ),
-#         offenses=Offenses(
-#             include_tables='Table F', include_offenses_type='current',
-#             exclude_tables='Tables A, B, D, C', exclude_offenses_type='prior',
-#             offenses_subquery='serving time for a controlling offense that is in Table F who have no prior commits in Tables A, B, D or C'
-#         ),
-#         logical_operations=['AND', 'AND', 'AND']
-#     )
-# ]
-
 ###################################################################################
 
+# SAMPLE OUTPUT (Pydantic)
 # eligibility_filters = [
 #  Conditions(
 #         demographics=Demographics(
