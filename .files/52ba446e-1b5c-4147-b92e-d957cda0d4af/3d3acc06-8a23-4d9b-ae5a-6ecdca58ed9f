@@ -1,0 +1,40 @@
+{
+  "eligibility_filters": [
+    {
+      "demographics": {
+        "individual_age": 0,
+        "individual_age_column": "",
+        "individual_age_operator": "",
+        "individual_location": "California",
+        "individual_location_column": "Current Location",
+        "sentenced_by": "",
+        "sentenced_by_column": "",
+        "individual_ethnicity": "black",
+        "individual_ethnicity_column": "Ethnicity",
+        "sentenced_age": 0,
+        "sentenced_age_column": "",
+        "sentenced_age_operator": "",
+        "sentenced_years": 15,
+        "sentenced_years_column": "Aggregate Sentence in Months",
+        "sentenced_years_operator": ">",
+        "served_years": 0,
+        "served_years_column": "",
+        "served_years_operator": "",
+        "demographic_subquery": "individuals who are black, sentenced to over 15 years, and serving time in any California prison"
+      },
+      "offenses": {
+        "offense_number": "PC666",
+        "offense_number_column": "Controlling Offense",
+        "offense_number_type": "controlling",
+        "offense_number_operator": "exact",
+        "offense_description": "",
+        "offense_description_column": "Description",
+        "offense_subquery": "serving time for a controlling offense PC666"
+      },
+      "logical_operations": [
+        "AND",
+        "AND"
+      ]
+    }
+  ]
+}

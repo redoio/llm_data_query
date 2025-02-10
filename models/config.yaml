@@ -1,0 +1,8 @@
+# Unique identifier (UID)
+id_label: "CDCNo"
+criteria_path: "https://raw.githubusercontent.com/redoio/resentencing_data_initiative/main/eligibility_model/code/offense_classification/county/los_angeles/selection_criteria.xlsx"
+# Input
+base_path: "https://raw.githubusercontent.com/redoio/offenses_data/main/data/"
+file_name: ["demographics.xlsx", "current_commitments.xlsx", "prior_commitments.xlsx"]
+# Output
+pop_dict: 'population_dict'
