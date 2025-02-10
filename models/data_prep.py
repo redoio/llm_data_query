@@ -2,6 +2,7 @@
 import pandas as pd
 import yaml 
 from tqdm import tqdm 
+import gzip
 import pickle
 
 # Get config values
